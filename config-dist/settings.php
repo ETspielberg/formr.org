@@ -21,10 +21,10 @@ $settings['timezone'] = 'Europe/Berlin';
 $settings['database'] = array(
 	'datasource' => 'Database/Mysql',
 	'persistent' => false,
-	'host' => 'localhost',
-	'login' => 'user',
-	'password' => 'password',
-	'database' => 'database',
+	'host' => 'formr_db',
+	'login' => getenv('MARIADB_USERNAME') ?: 'formr_user',
+	'password' => getenv('MARIADB_PASSWORD') ?: 'formr_user',
+	'database' => getenv('MARIADB_DATABASE') ?: 'formr_db',
 	'prefix' => '',
 	'encoding' => 'utf8mb',
 	'unix_socket' => '',
@@ -46,13 +46,13 @@ $settings['alternative_opencpu_instance'] = array(
 // email SMTP and queueing configuration for emails sent by the formr app itself
 // for example for email confirmation and password reset
 $settings['email'] = array(
-	'host' => 'smtp.example.com',
-	'port' => 587,
+	'host' => getenv('EMAIL_SMTP_HOST') ?: 'smtp.example.com',
+	'port' => getenv('EMAIL_SMTP_PORT') ?: 587,
 	'tls' => true,
-	'from' => 'email@example.com',
-	'from_name' => 'Formr',
-	'username' => 'email@example.com',
-	'password' => 'password',
+	'from' => getenv('EMAIL_ADDRESS') ?: 'email@example.com',
+	'from_name' => getenv('EMAIL_FROM') : 'Formr',
+	'username' => getenv('EMAIL_USERNAME') : 'email@example.com',
+	'password' => getenv('EMAIL_PASSWORD') : 'generate-password',
 	// use db queue for emailing
 	'use_queue' => true,
 	// Number of seconds for which deamon loop should rest before getting next batch
