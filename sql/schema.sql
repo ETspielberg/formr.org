@@ -3,14 +3,14 @@
 -- Schema Updated: 01.10.2024
 --
 SET NAMES utf8mb4;
-CREATE DATABASE IF NOT EXISTS formr CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE formr;
+CREATE DATABASE IF NOT EXISTS formr_db CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE formr_db;
 
 --
 -- Table structure for table `oauth_access_tokens`
 --
 
-CREATE TABLE `oauth_access_tokens` (
+CREATE TABLE IF NOT EXISTS`oauth_access_tokens` (
   `access_token` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE `oauth_access_tokens` (
 -- Table structure for table `oauth_authorization_codes`
 --
 
-CREATE TABLE `oauth_authorization_codes` (
+CREATE TABLE IF NOT EXISTS `oauth_authorization_codes` (
   `authorization_code` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `oauth_authorization_codes` (
 -- Table structure for table `oauth_clients`
 --
 
-CREATE TABLE `oauth_clients` (
+CREATE TABLE IF NOT EXISTS `oauth_clients` (
   `client_id` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_secret` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `redirect_uri` varchar(2000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE `oauth_clients` (
 -- Table structure for table `oauth_jwt`
 --
 
-CREATE TABLE `oauth_jwt` (
+CREATE TABLE IF NOT EXISTS `oauth_jwt` (
   `client_id` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `subject` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `public_key` varchar(2000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE `oauth_jwt` (
 -- Table structure for table `oauth_refresh_tokens`
 --
 
-CREATE TABLE `oauth_refresh_tokens` (
+CREATE TABLE IF NOT EXISTS `oauth_refresh_tokens` (
   `refresh_token` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE `oauth_refresh_tokens` (
 -- Table structure for table `oauth_scopes`
 --
 
-CREATE TABLE `oauth_scopes` (
+CREATE TABLE IF NOT EXISTS `oauth_scopes` (
   `scope` mediumtext COLLATE utf8mb4_unicode_ci,
   `is_default` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -86,7 +86,7 @@ CREATE TABLE `oauth_scopes` (
 -- Table structure for table `oauth_users`
 --
 
-CREATE TABLE `oauth_users` (
+CREATE TABLE IF NOT EXISTS `oauth_users` (
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `password` varchar(2000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `first_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE `oauth_users` (
 -- Table structure for table `osf`
 --
 
-CREATE TABLE `osf` (
+CREATE TABLE IF NOT EXISTS `osf` (
   `user_id` int(10) unsigned NOT NULL,
   `access_token` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `access_token_expires` int(10) unsigned NOT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE `osf` (
 -- Table structure for table `survey_users`
 --
 
-CREATE TABLE `survey_users` (
+CREATE TABLE IF NOT EXISTS `survey_users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_code` varchar(64) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
   `first_name` VARCHAR(50) NULL,
@@ -139,7 +139,7 @@ CREATE TABLE `survey_users` (
 -- Table structure for table `survey_units`
 --
 
-CREATE TABLE `survey_units` (
+CREATE TABLE IF NOT EXISTS `survey_units` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
@@ -152,7 +152,7 @@ CREATE TABLE `survey_units` (
 -- Table structure for table `survey_runs`
 --
 
-CREATE TABLE `survey_runs` (
+CREATE TABLE IF NOT EXISTS `survey_runs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
   `created` datetime DEFAULT NULL,
@@ -204,7 +204,7 @@ CREATE TABLE `survey_runs` (
 -- Table structure for table `survey_run_sessions`
 --
 
-CREATE TABLE `survey_run_sessions` (
+CREATE TABLE IF NOT EXISTS `survey_run_sessions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `run_id` int(10) unsigned NOT NULL,
   `user_id` int(10) unsigned DEFAULT NULL,
@@ -231,7 +231,7 @@ CREATE TABLE `survey_run_sessions` (
 -- Table structure for table `survey_unit_sessions`
 --
 
-CREATE TABLE `survey_unit_sessions` (
+CREATE TABLE IF NOT EXISTS `survey_unit_sessions` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `unit_id` int(10) unsigned NOT NULL,
   `run_session_id` int(11) DEFAULT NULL,
@@ -257,7 +257,7 @@ CREATE TABLE `survey_unit_sessions` (
 -- Table structure for table `shuffle`
 --
 
-CREATE TABLE `shuffle` (
+CREATE TABLE IF NOT EXISTS `shuffle` (
   `session_id` int(10) unsigned NOT NULL,
   `unit_id` int(10) unsigned NOT NULL,
   `created` datetime DEFAULT NULL,
@@ -273,7 +273,7 @@ CREATE TABLE `shuffle` (
 -- Table structure for table `survey_branches`
 --
 
-CREATE TABLE `survey_branches` (
+CREATE TABLE IF NOT EXISTS `survey_branches` (
   `id` int(10) unsigned NOT NULL,
   `condition` mediumtext COLLATE utf8mb4_unicode_ci,
   `if_true` smallint(6) DEFAULT NULL,
@@ -288,7 +288,7 @@ CREATE TABLE `survey_branches` (
 -- Table structure for table `survey_email_accounts`
 --
 
-CREATE TABLE `survey_email_accounts` (
+CREATE TABLE IF NOT EXISTS `survey_email_accounts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
   `created` datetime DEFAULT NULL,
@@ -312,7 +312,7 @@ CREATE TABLE `survey_email_accounts` (
 -- Table structure for table `survey_emails`
 --
 
-CREATE TABLE `survey_emails` (
+CREATE TABLE IF NOT EXISTS `survey_emails` (
   `id` int(10) unsigned NOT NULL,
   `account_id` int(10) unsigned DEFAULT NULL,
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -333,7 +333,7 @@ CREATE TABLE `survey_emails` (
 -- Table structure for table `survey_email_log`
 --
 
-CREATE TABLE `survey_email_log` (
+CREATE TABLE IF NOT EXISTS `survey_email_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `session_id` int(10) unsigned DEFAULT NULL,
   `email_id` int(10) unsigned DEFAULT NULL,
@@ -357,7 +357,7 @@ CREATE TABLE `survey_email_log` (
 -- Table structure for table `survey_externals`
 --
 
-CREATE TABLE `survey_externals` (
+CREATE TABLE IF NOT EXISTS `survey_externals` (
   `id` int(10) unsigned NOT NULL,
   `address` text COLLATE utf8mb4_unicode_ci,
   `api_end` tinyint(1) DEFAULT '0',
@@ -372,7 +372,7 @@ CREATE TABLE `survey_externals` (
 -- Table structure for table `survey_studies`
 --
 
-CREATE TABLE `survey_studies` (
+CREATE TABLE IF NOT EXISTS `survey_studies` (
   `id` int(10) unsigned NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `created` datetime DEFAULT NULL,
@@ -404,7 +404,7 @@ CREATE TABLE `survey_studies` (
 -- Table structure for table `survey_items`
 --
 
-CREATE TABLE `survey_items` (
+CREATE TABLE IF NOT EXISTS `survey_items` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `study_id` int(10) unsigned NOT NULL,
   `type` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -434,7 +434,7 @@ CREATE TABLE `survey_items` (
 -- Table structure for table `survey_item_choices`
 --
 
-CREATE TABLE `survey_item_choices` (
+CREATE TABLE IF NOT EXISTS `survey_item_choices` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `study_id` int(10) unsigned NOT NULL,
   `list_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -454,7 +454,7 @@ CREATE TABLE `survey_item_choices` (
 -- Table structure for table `survey_items_display`
 --
 
-CREATE TABLE `survey_items_display` (
+CREATE TABLE IF NOT EXISTS `survey_items_display` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` int(10) unsigned NOT NULL,
   `session_id` int(10) unsigned NOT NULL,
@@ -482,7 +482,7 @@ CREATE TABLE `survey_items_display` (
 -- Table structure for table `survey_newsletter`
 --
 
-CREATE TABLE `survey_newsletter` (
+CREATE TABLE IF NOT EXISTS `survey_newsletter` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `names` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -497,7 +497,7 @@ CREATE TABLE `survey_newsletter` (
 -- Table structure for table `survey_pages`
 --
 
-CREATE TABLE `survey_pages` (
+CREATE TABLE IF NOT EXISTS `survey_pages` (
   `id` int(10) unsigned NOT NULL,
   `body` mediumtext COLLATE utf8mb4_unicode_ci,
   `body_parsed` mediumtext COLLATE utf8mb4_unicode_ci,
@@ -512,7 +512,7 @@ CREATE TABLE `survey_pages` (
 -- Table structure for table `survey_pauses`
 --
 
-CREATE TABLE `survey_pauses` (
+CREATE TABLE IF NOT EXISTS `survey_pauses` (
   `id` int(10) unsigned NOT NULL,
   `wait_until_time` time DEFAULT NULL,
   `wait_until_date` date DEFAULT NULL,
@@ -529,7 +529,7 @@ CREATE TABLE `survey_pauses` (
 -- Table structure for table `survey_reports`
 --
 
-CREATE TABLE `survey_reports` (
+CREATE TABLE IF NOT EXISTS `survey_reports` (
   `session_id` int(10) unsigned NOT NULL,
   `unit_id` int(10) unsigned NOT NULL,
   `created` datetime DEFAULT NULL,
@@ -546,7 +546,7 @@ CREATE TABLE `survey_reports` (
 -- Table structure for table `survey_results`
 --
 
-CREATE TABLE `survey_results` (
+CREATE TABLE IF NOT EXISTS `survey_results` (
   `session_id` int(10) unsigned NOT NULL,
   `study_id` int(10) unsigned NOT NULL,
   `created` datetime DEFAULT NULL,
@@ -565,7 +565,7 @@ CREATE TABLE `survey_results` (
 -- Table structure for table `survey_run_settings`
 --
 
-CREATE TABLE `survey_run_settings` (
+CREATE TABLE IF NOT EXISTS `survey_run_settings` (
   `run_session_id` int(10) unsigned NOT NULL,
   `settings` mediumtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`run_session_id`)
@@ -575,7 +575,7 @@ CREATE TABLE `survey_run_settings` (
 -- Table structure for table `survey_run_special_units`
 --
 
-CREATE TABLE `survey_run_special_units` (
+CREATE TABLE IF NOT EXISTS `survey_run_special_units` (
   `id` int(10) unsigned NOT NULL,
   `run_id` int(10) unsigned NOT NULL,
   `type` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -591,7 +591,7 @@ CREATE TABLE `survey_run_special_units` (
 -- Table structure for table `survey_run_units`
 --
 
-CREATE TABLE `survey_run_units` (
+CREATE TABLE IF NOT EXISTS `survey_run_units` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `run_id` int(10) unsigned NOT NULL,
   `unit_id` int(10) unsigned DEFAULT NULL,
@@ -610,7 +610,7 @@ CREATE TABLE `survey_run_units` (
 -- Table structure for table `survey_shuffles`
 --
 
-CREATE TABLE `survey_shuffles` (
+CREATE TABLE IF NOT EXISTS `survey_shuffles` (
   `id` int(10) unsigned NOT NULL,
   `groups` smallint(5) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -622,7 +622,7 @@ CREATE TABLE `survey_shuffles` (
 -- Table structure for table `survey_text_messages`
 --
 
-CREATE TABLE `survey_text_messages` (
+CREATE TABLE IF NOT EXISTS `survey_text_messages` (
   `id` int(10) unsigned NOT NULL,
   `account_id` int(10) unsigned DEFAULT NULL,
   `recipient_field` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -638,7 +638,7 @@ CREATE TABLE `survey_text_messages` (
 -- Table structure for table `survey_uploaded_files`
 --
 
-CREATE TABLE `survey_uploaded_files` (
+CREATE TABLE IF NOT EXISTS `survey_uploaded_files` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `run_id` int(10) unsigned NOT NULL,
   `created` datetime DEFAULT NULL,
@@ -652,7 +652,7 @@ CREATE TABLE `survey_uploaded_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
-CREATE TABLE `survey_settings` (
+CREATE TABLE IF NOT EXISTS `survey_settings` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `setting` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `value` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -664,7 +664,7 @@ CREATE TABLE `survey_settings` (
 -- Table structure for table `user_uploaded_files`
 --
 
-CREATE TABLE `user_uploaded_files` (
+CREATE TABLE IF NOT EXISTS `user_uploaded_files` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `study_id` INT UNSIGNED NULL,
   `unit_session_id` INT UNSIGNED NULL,
@@ -690,7 +690,7 @@ CREATE TABLE `user_uploaded_files` (
 -- Table structure for table `survey_run_expiry_reminders`
 --
 
-CREATE TABLE `survey_run_expiry_reminders` (
+CREATE TABLE IF NOT EXISTS `survey_run_expiry_reminders` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `run_id` int(10) unsigned NOT NULL,
   `reminder_type` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
