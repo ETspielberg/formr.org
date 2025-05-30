@@ -50,9 +50,9 @@ $settings['email'] = array(
 	'port' => getenv('EMAIL_SMTP_PORT') ?: 587,
 	'tls' => true,
 	'from' => getenv('EMAIL_ADDRESS') ?: 'email@example.com',
-	'from_name' => getenv('EMAIL_FROM') : 'Formr',
-	'username' => getenv('EMAIL_USERNAME') : 'email@example.com',
-	'password' => getenv('EMAIL_PASSWORD') : 'generate-password',
+	'from_name' => getenv('EMAIL_FROM') ? : 'Formr',
+	'username' => getenv('EMAIL_USERNAME') ?  : 'email@example.com',
+	'password' => getenv('EMAIL_PASSWORD') ?  : 'generate-password',
 	// use db queue for emailing
 	'use_queue' => true,
 	// Number of seconds for which deamon loop should rest before getting next batch
