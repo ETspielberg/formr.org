@@ -49,9 +49,9 @@ Config::initialize($settings);
 // Global Setup
 function __formr_setup($settings = array()): void
 {
-    if (defined('WEBROOT')) {
-        return;
-    }
+    # if (defined('WEBROOT')) {
+    #     return;
+    # }
 
     if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
         $protocol = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://';
@@ -75,11 +75,11 @@ function __formr_setup($settings = array()): void
     $doc_root = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] . '/' : '/';
     $online = true;
 
-    if (!empty($settings['protocol'])) {
-        $protocol = $settings['protocol'];
-    }
+    # if (!empty($settings['protocol'])) {
+    #     $protocol = $settings['protocol'];
+    # }
     define('PROTOCOL', $protocol);
-    define('WEBROOT', $protocol . $doc_root);
+    define('WEBROOT', $protocol . $server_name . '/');
     define('ONLINE', $online);
     define('SSL', $protocol === "https://");
     define('RUNROOT', WEBROOT);
