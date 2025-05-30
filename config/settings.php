@@ -8,7 +8,7 @@ $settings['use_study_subdomains'] = true;
 $settings['admin_domain'] = "www.example.com";
 # ideally not the same domain as the admin domain, for study subdomains use *.example.com
 $settings['study_domain'] = "*.example.com";
-$settings['protocol'] = "https://";
+$settings['protocol'] = getenv('HTTP_X_FORWARDED_PROTO') ?: 'http';
 
 // Codes listed here can be entered in the sign-up box to turn
 // users into admins automatically (upon email confirmation)
@@ -26,7 +26,9 @@ $settings['database'] = array(
 	'password' => getenv('MARIADB_PASSWORD') ?: 'formr_user',
 	'database' => getenv('MARIADB_DATABASE') ?: 'formr_db',
 	'prefix' => '',
-	'encoding' => 'utf8mb3',
+	'encoding' => 'utf8mb4',
+    'charset' => 'utf8mb4',
+    'collation' => 'utf8mb4_unicode_ci',
 	'unix_socket' => '',
 );
 
