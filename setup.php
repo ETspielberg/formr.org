@@ -2,13 +2,9 @@
 
 define('FORMR_VERSION', file_get_contents(__DIR__ . '/VERSION'));
 
-define('APPLICATION_ROOT', __DIR__ . '/');
-define('INCLUDE_ROOT', APPLICATION_ROOT);
-
-define('APPLICATION_PATH', APPLICATION_ROOT . 'application/');
-
-define('APPLICATION_CRYPTO_KEY_FILE', APPLICATION_ROOT . 'formr-crypto.key');
-
+const APPLICATION_ROOT = __DIR__ . '/';
+const APPLICATION_PATH = APPLICATION_ROOT . 'application/';
+const APPLICATION_CRYPTO_KEY_FILE = APPLICATION_ROOT . 'formr-crypto.key';
 // Load composer Autoloader
 require_once APPLICATION_ROOT . 'vendor/autoload.php';
 
@@ -32,13 +28,13 @@ require_once APPLICATION_PATH . 'Functions.php';
 
 // Load application settings
 /* @var $settings array */
-require_once APPLICATION_ROOT . 'config-dist/settings.php';
+require_once APPLICATION_ROOT . 'config/settings.php';
 require_once APPLICATION_ROOT . 'config/settings.php';
 
 // Define default assets
 if (php_sapi_name() != 'cli') {
-	require_once APPLICATION_ROOT . 'config-dist/assets.php';
-	require_once APPLICATION_ROOT . 'config-dist/css-classes.php';
+	require_once APPLICATION_ROOT . 'config/assets.php';
+	require_once APPLICATION_ROOT . 'config/css-classes.php';
 }
 
 // Set current formr version (bumped on release)
@@ -51,7 +47,8 @@ $autoloader = require_once APPLICATION_PATH . 'Autoloader.php';
 Config::initialize($settings);
 
 // Global Setup
-function __formr_setup($settings = array()) {
+function __formr_setup($settings = array()): void
+{
 	if (defined('WEBROOT')) {
 		return;
 	}
