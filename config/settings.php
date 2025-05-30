@@ -26,7 +26,7 @@ $settings['database'] = array(
 	'password' => getenv('MARIADB_PASSWORD') ?: 'formr_user',
 	'database' => getenv('MARIADB_DATABASE') ?: 'formr_db',
 	'prefix' => '',
-	'encoding' => 'utf8mb',
+	'encoding' => 'utf8mb3',
 	'unix_socket' => '',
 );
 
