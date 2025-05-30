@@ -29,7 +29,6 @@ require_once APPLICATION_PATH . 'Functions.php';
 // Load application settings
 /* @var $settings array */
 require_once APPLICATION_ROOT . 'config/settings.php';
-require_once APPLICATION_ROOT . 'config/settings.php';
 
 // Define default assets
 if (php_sapi_name() != 'cli') {
@@ -49,9 +48,6 @@ Config::initialize($settings);
 // Global Setup
 function __formr_setup($settings = array()): void
 {
-    # if (defined('WEBROOT')) {
-    #     return;
-    # }
 
     if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
         $protocol = $_SERVER['HTTP_X_FORWARDED_PROTO'] . '://';
@@ -72,12 +68,8 @@ function __formr_setup($settings = array()): void
     define('SERVER_NAME', $server_name);
 
 
-    $doc_root = isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] . '/' : '/';
     $online = true;
 
-    # if (!empty($settings['protocol'])) {
-    #     $protocol = $settings['protocol'];
-    # }
     define('PROTOCOL', $protocol);
     define('WEBROOT', $protocol . $server_name . '/');
     define('ONLINE', $online);
