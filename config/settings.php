@@ -8,7 +8,7 @@ $settings['use_study_subdomains'] = getenv('USE_STUDY_SUBDOMAINS') ?: false;
 $settings['admin_domain'] = getenv('FORMR_ADMIN_DOMAIN') ?: 'www.example.com';
 # ideally not the same domain as the admin domain, for study subdomains use *.example.com
 $settings['study_domain'] = getenv('FORMR_STUDY_DOMAIN') ?: 'www.example.com';
-$settings['protocol'] = getenv('HTTP_X_FORWARDED_PROTO') ?: 'http://';
+$settings['protocol'] = getenv('HTTP_X_FORWARDED_PROTO') . '://' ?: 'http://';
 
 // Codes listed here can be entered in the sign-up box to turn
 // users into admins automatically (upon email confirmation)
