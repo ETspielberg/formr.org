@@ -4,10 +4,10 @@
  * Formr.org configuration
  */
 // Use sub domains for studies
-$settings['use_study_subdomains'] = true;
-$settings['admin_domain'] = "www.example.com";
+$settings['use_study_subdomains'] = getenv('USE_STUDY_SUBDOMAINS') ?: false;
+$settings['admin_domain'] = getenv('FORMR_ADMIN_DOMAIN') ?: 'www.example.com';
 # ideally not the same domain as the admin domain, for study subdomains use *.example.com
-$settings['study_domain'] = "*.example.com";
+$settings['study_domain'] = getenv('FORMR_STUDY_DOMAIN') ?: 'www.example.com';
 $settings['protocol'] = getenv('HTTP_X_FORWARDED_PROTO') ?: 'http://';
 
 // Codes listed here can be entered in the sign-up box to turn
@@ -48,13 +48,13 @@ $settings['alternative_opencpu_instance'] = array(
 // email SMTP and queueing configuration for emails sent by the formr app itself
 // for example for email confirmation and password reset
 $settings['email'] = array(
-	'host' => getenv('EMAIL_SMTP_HOST') ?: 'smtp.example.com',
-	'port' => getenv('EMAIL_SMTP_PORT') ?: 587,
+	'host' => getenv('MAIL_SMTP_HOST') ?: 'smtp.example.com',
+	'port' => getenv('MAIL_SMTP_PORT') ?: 587,
 	'tls' => true,
-	'from' => getenv('EMAIL_ADDRESS') ?: 'email@example.com',
-	'from_name' => getenv('EMAIL_FROM') ? : 'Formr',
-	'username' => getenv('EMAIL_USERNAME') ?  : 'email@example.com',
-	'password' => getenv('EMAIL_PASSWORD') ?  : 'generate-password',
+	'from' => getenv('MAIL_ADDRESS') ?: 'email@example.com',
+	'from_name' => getenv('MAIL_FROM') ? : 'Formr',
+	'username' => getenv('MAIL_USERNAME') ?  : 'email@example.com',
+	'password' => getenv('MAIL_PASSWORD') ?  : 'generate-password',
 	// use db queue for emailing
 	'use_queue' => true,
 	// Number of seconds for which deamon loop should rest before getting next batch
