@@ -253,8 +253,8 @@ class RunController extends Controller {
         if ($this->run->use_material_design || $this->request->str('tmd') === 'true') {
             $this->registerAssets('material');
         }
-        //$this->registerCSS($assets['css'], $this->run->name);
-        //$this->registerJS($assets['js'], $this->run->name);
+        $this->registerCSS($assets['css'], $this->run->name);
+        $this->registerJS($assets['js'], $this->run->name);
         return $vars;
     }
 
