@@ -25,11 +25,6 @@
 <meta name="twitter:url" content="<?php echo $meta['url']; ?>" />
 <meta name="twitter:description" content="<?php echo $meta['description']; ?>" />
 
-<?php
-foreach ($css as $id => $files) {
-    print_stylesheets($files, $id);
-}
-?>
 <script>
     window.formr = <?php echo !empty($jsConfig) ? json_encode($jsConfig) : '{}' ?>;
 </script>
@@ -39,4 +34,11 @@ foreach ($js as $id => $files) {
     print_scripts($files, $id);
 }
 ?>
+
 <link rel="icon" href="<?php echo site_url('favicon.ico'); ?>">
+
+<?php
+foreach ($css as $id => $files) {
+    print_stylesheets($files, $id);
+}
+?>
