@@ -34,7 +34,7 @@ $settings['database'] = array(
 
 // OpenCPU instance settings
 $settings['opencpu_instance'] = array(
-	'local_url' => '/ocpu',
+	'local_url' => 'http://opencpu:8004',
 	'public_url' => '/ocpu',
 	'r_lib_path' => '/usr/local/lib/R/site-library'
 );
