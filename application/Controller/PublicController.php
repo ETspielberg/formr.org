@@ -13,6 +13,15 @@ class PublicController extends Controller {
         $this->setView('public/home');
         return $this->sendResponse();
     }
+    public function privacyAction() {
+        $this->setView('public/privacy');
+        return $this->sendResponse();
+    }
+
+    public function datenschutzAction() {
+        $this->setView('public/datenschutz');
+        return $this->sendResponse();
+    }
 
     public function documentationAction() {
         if (Site::getSettings('content:docu:show', 'true') !== 'true') {

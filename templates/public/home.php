@@ -1,175 +1,88 @@
 <?php Template::loadChild('public/header'); ?>
 
-<!-- #fmr-header -->
+<!-- App overview messaging and featurettes
+  ================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
 
-<section id="fmr-hero" class="js-fullheight" data-next="yes">
-    <div class="fmr-overlay"></div>
-    <div class="container">
-        <div class="fmr-intro js-fullheight">
-            <div class="fmr-intro-text">
-                <div class="fmr-center-position">
-                    <h2 class="animate-box"><?=Config::get('brand_long')?></h2>
-                    <?php Template::loadChild('public/alerts'); ?>
-                    <h3>chain simple surveys into long runs, use the power of R to generate pretty feedback and complex designs</h3>
-                    <p><a href="<?= site_url('register'); ?>" class="btn btn-primary btn-lg btn-raised btn-material-pink">Sign up (it's all free)</a></p>
-                </div>
-            </div>
+<div class="container apps">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="img/gender-publication-gap_square.png" alt="Generic placeholder image" width="140" height="140"  style="background-color: white;">
+            <br><span style="background-color: #004c93; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">UDE-intern</span>
+            <h2 class="fw-normal">UDE Gender Publication Gap App</h2>
+            <p>Eine Analyse der Unterschiede im Publikationsoutput von Männern und Frauen anhand der in der Universitätsbibliographie verzeichneten Publikationen, präsentiert von der Universitätsbibliothek Duisburg-Essen</p>
+            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/gender-gap-app/" target="_blank" role="button">zur App &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="img/deal_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
+            <br><span style="background-color: #61a27c; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">offen für alle</span>
+            <h2 class="fw-normal">DEAL<br>Vorhersage-Tool</h2>
+            <p>Eine Analyse hinsichtlich der möglichen Publikationszahlen und Kostenentwicklung durch DEAL-Verträge anhand des bisherigen Publikationsverhaltens. </p>
+            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/deal-predictions/" target="_blank" role="button">zur App &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="img/biblio_reports_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
+            <br><span style="background-color: #ec7206; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">interner Beta-Test</span>
+            <h2 class="fw-normal">BiblioReports App</h2>
+            <p>Eine interaktive App zur Erstellung von individuellen und DORA-kompatiblen bibliometrischen Analysen basierend auf freien Daten ganz nach Ihren Wünschen.</p>
+            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/biblio-reports/" target="_blank" role="button">zur App &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="img/verlagsabfrage_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
+            <br><span style="background-color: #b8103b; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">UB-intern</span>
+            <h2 class="fw-normal">Verlagsabfrage-Tool</h2>
+            <p>Abfrage und Überblick über UDE-Publikationen in bestimmten Zeitschriftenlisten, z.B. von spezifischen Verlagen. </p>
+            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/verlagsabfrage-tool/" target="_blank" role="button">zur App &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="img/anfragen_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
+            <br><span style="background-color: #004c93; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">UDE-intern</span>
+            <h2 class="fw-normal">Analysen auf Anfrage</h2>
+            <p>Bei Bedarf erstellen wir gerne weitere anlassbezogene individuelle Analysen auf Anfrage (beispielsweise für Förderanträge oder Bewerbungsverfahren).</p>
+            <p><a class="btn btn-secondary" href="mailto:bibliometrie.ub@uni-due.de" target="_blank" role="button">Sprechen Sie uns an!</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">BiblioReports <span class="text-body-secondary">im Beta-Test</span></h2>
+            <p class="lead">Die neueste Entwicklung des UDE-Bibliometrie-Team, die BiblioReports App zur Erstellung von individuellen DORA-kompatiblen biliometrischen Reports befindet sich nun in der Beta-Testphase. Ziel des Tests ist es, auf inhaltlicher Ebene Feedback aus möglichst vielen verschiedenen Perspektiven zu erhalten und auf technischer Ebene fehleranfällige Sonderfälle zu identifizieren und zu beheben.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="img/BiblioReports_collabs.gif" alt="Generic placeholder image">
         </div>
     </div>
-    <div class="fmr-learn-more animate-box">
-        <a href="#home-more" class="scroll-buttonn">
-            <span class="arrow"><i class="fa fa-chevron-down"></i></span>
-        </a>
-    </div>
-</section>
-<!-- END #fmr-hero -->
 
-<section id="fmr-features">
-    <a name="home-more"></a>
-    <div class="container">
-        <div class="row text-center row-bottom-padded-md">
-            <div class="col-md-8 col-md-offset-2">
-                <h2 class="fmr-lead animate-box">Core Strengths</h2>
-                <p class="fmr-sub-lead animate-box">The core strengths of formr</p>
-            </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Vorhersage von Publikationszahlen und -kosten</h2>
+            <p class="lead">Bei der Bewertung von Transformationsverträgen wie den DEAL-Verträgen mit Elsevier, Wiley und Springer Nature ist die Frage, wie hoch die Publikationszahlen und die damit verbundenen Kosten in den nächsten Jahren sein werden von großer Bedeutung für die Finanzplanung. Das Bibliometrie-Team bietet ein Tool an, das neben einer Schätzung für diese Zahlen auch die Unsicherheit bei der Schätzung veranschaulicht und dadurch auf die mit den Verträgen einhergehende Planungsunsicherheit hinweist.</p>
         </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12 animate-box">
-                <div class="fmr-feature">
-                    <div class="fmr-icon">
-                        <i class="fa fa-line-chart"></i>
-                    </div>
-                    <h3>Live Feedback</h3>
-                    <p>generates live and interactive feedback, including <a href="http://ggplot2.org/">ggplot2</a>, interactive <a href="http://ggvis.rstudio.com">ggvis</a> and <a href="http://www.htmlwidgets.org">htmlwidgets</a>. In our studies, this increases interest and retention. <a href="<?php echo site_url('interactive_charts'); ?>">See examples.</a></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 animate-box">
-                <div class="fmr-feature">
-                    <div class="fmr-icon">
-                        <i class="fa fa-envelope"></i>
-                    </div>
-                    <h3>Reminders, invitations</h3>
-                    <p>sends automated reminders via email or text message, you can generate custom text and feedback here too</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 animate-box">
-                <div class="fmr-feature">
-                    <div class="fmr-icon">
-                        <i class="fa fa-mobile"></i>
-                    </div>
-                    <h3>Responsive Layout</h3>
-                    <p>all platforms and device sizes are supported (about 30-40% of participants fill out our surveys on a mobile device)</p>
-                </div>
-            </div>
-            <div class="clear clearfix"></div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12 animate-box">
-                <div class="fmr-feature">
-                    <div class="fmr-icon">
-                        <i class="fa fa-file"></i>
-                    </div>
-                    <h3>Share &amp; Remix</h3>
-                    <p>easily share, swap and remix surveys (they're just spreadsheets) and runs (they're just JSON). Track version changes in these files with e.g. the <a href="https://osf.io">OSF</a>.</p>
-                </div>
-            </div>
-            <div class="clearfix visible-sm-block"></div>
-            <div class="col-md-4 col-sm-6 col-xs-12 animate-box">
-                <div class="fmr-feature">
-                    <div class="fmr-icon">
-                        <i class="fa fa-code"></i>
-                    </div>
-                    <h3>Use R</h3>
-                    <p>use R to do anything it can do (plot a graph or even use a sentiment analysis of a participant's Twitter feed to decide which questions to ask)</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 animate-box">
-                <div class="fmr-feature">
-                    <div class="fmr-icon">
-                        <i class="fa fa-lock"></i>
-                    </div>
-                    <h3>Secure and open source</h3>
-                    <p>Participants can only connect via an SSL-encrypted connection. <a href="<?php echo site_url('about#security'); ?>">Learn more about security on formr</a>.</p>
-                </div>
-            </div>
-            <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="img/news_predictions.PNG" alt="Generic placeholder image">
         </div>
     </div>
-</section>	
-<!-- END #fmr-features -->
 
-<section id="fmr-projects">
-    <div class="container">
-        <div class="row row-bottom-padded-md">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <h2 class="fmr-lead animate-box">What formr can do</h2>
-                <p class="fmr-sub-lead animate-box">These study types (and others) can be implemented in formr.org</p>
-            </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Bibliometrie für die  <span class="text-body-secondary">Exzellenzinitiative</span></h2>
+            <p class="lead">Das Bibliometrie-Team hat die Forschungsgruppen, die sich als Exzellenzcluster in der Exzellenzinitiative bewerben wollen, bei Ihren Vorbereitungen und Anträgen durch Analysen der Clusterzusammensetzung, Publikationsaktivität und Vernetzung unterstützt. Wir wünschen den Gruppen viel Erfolg bei der Bewerbung!</p>
         </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-                <div class="fmr-project-item">
-                    <img src="<?= asset_url('build/img/feedback.png') ?>" alt="Image" class="img-responsive">
-                    <div class="fmr-text">
-                        <h2>Surveys with feedback</h2>
-                        <p class="text-left">generate simple surveys via spreadsheets. With and without feedback. Use R to generate feedback</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-                <div class="fmr-project-item">
-                    <img src="<?= asset_url('build/img/survey.jpg') ?>" alt="Image" class="img-responsive">
-                    <div class="fmr-text">
-                        <h2>Complex Surveys</h2>
-                        <p class="text-left">complex surveys (using skipping logic, personalised text, complex feedback)</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-                <div class="fmr-project-item">
-                    <img src="<?= asset_url('build/img/yes-no.jpg') ?>" alt="Image" class="img-responsive">
-                    <div class="fmr-text">
-                        <h2>Eligibility Limitations</h2>
-                        <p class="text-left">filter your participants with eligibility criteria.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-                <div class="fmr-project-item">
-                    <img src="<?= asset_url('build/img/diary.png') ?>" alt="Image" class="img-responsive">
-                    <div class="fmr-text">
-                        <h2>Diary Studies</h2>
-                        <p  class="text-left">do diary studies with flexible automated email/text message reminders</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-                <div class="fmr-project-item">
-                    <img src="<?= asset_url('build/img/longitudinal_study.png') ?>" alt="Image" class="img-responsive">
-                    <div class="fmr-text">
-                        <h2>Longitudinal Studies</h2>
-                        <p class="text-left">do longitudinal studies. The items of later waves need not exist in final form at wave 1.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-                <div class="fmr-project-item">
-                    <img src="<?= asset_url('build/img/people-social-network.jpg') ?>" alt="Image" class="img-responsive">
-                    <div class="fmr-text">
-                        <h2>Longitudinal Social Networks</h2>
-                        <p class="text-left">let people rate their social networks and track changes in them</p>
-                    </div>
-                </div>
-            </div>
-
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="img/exc.PNG" alt="Generic placeholder image" style="filter: blur(0.1px);-webkit-filter: blur(0.1px);">
         </div>
     </div>
-</section>
-<!-- END #fmr-projects -->
-
-
-<?php Template::loadChild('public/disclaimer'); ?>
 
 <?php Template::loadChild('public/footer'); ?>
 			
