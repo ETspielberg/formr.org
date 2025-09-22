@@ -5,12 +5,12 @@
     </head>
 
     <body>
-
+    <?php Template::loadChild('public/navigation'); ?>
         <div id="fmr-page" class="<?php echo!empty($bodyClass) ? $bodyClass : 'body'; ?>">
 
             <section id="fmr-header" class="<?php echo!empty($headerClass) ? $headerClass : 'header'; ?>">
                 <div class="container">
-                    <?php Template::loadChild('public/navigation'); ?>
+
                 </div>
             </section>
 
