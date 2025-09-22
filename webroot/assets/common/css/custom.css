@@ -1,0 +1,317 @@
+
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #F1F1F1;
+    font-size: 1rem;
+    /*font-family: 'Open Sans', 'Inter', Helvetica, Arial, sans-serif;*/
+}
+
+header {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: #FFF;
+}
+
+footer {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: #003b7a;
+    color: #FFF;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 5rem;
+}
+
+a {
+  color: #004c93;  
+}
+
+.navbar {
+    border-bottom: 1px solid rgba(0,0,0,0.175);
+    padding: 0 0.5rem;
+    background-color: #FFF !important;
+}
+
+.navbar-blue {
+    border-bottom: none;
+    padding: 0 0.5rem;
+    background-color: #003b7a !important;
+    color: #FFF;
+    /*height: 45px; */ 
+    font-size: 1.15rem;
+}
+
+.nav-link {
+    color: #FFF !important;
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem !important;
+}
+
+
+
+
+  .dropdown-menu {
+    background-color: #003b7a;
+    border: none;
+  }
+  
+  .dropdown-menu .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* example hover effect */
+  }
+  
+  .navbar-blue .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* example hover effect */
+  }
+
+
+
+  /*
+.jumbotron {
+    color: #1a171b;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+*/
+
+.jumbotron {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1a171b;
+    background-color: transparent;
+    padding-bottom: 2rem;
+    padding-top:2rem;
+}
+
+
+.carousel-item {
+    background-color: #FFF;
+}
+
+.carousel-caption {
+    color: #202020;
+}
+
+.carousel-control-previous {
+    color: #202020;
+}
+
+.carousel-control-next {
+    color: #202020;
+}
+
+.carousel .carousel-indicators [data-bs-target], [data-bs-theme="light"].carousel .carousel-indicators [data-bs-target] {
+    background-color: rgba(65, 65, 65, 0.5);
+  }
+
+
+
+
+.app-logo {
+    max-height:120px;
+    width:auto;
+    display:block;
+    margin:auto;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+
+
+.btn-primary {
+    color:#fff;
+    background-color:#004c93;
+    border-color:#004c93;
+   }
+.btn-primary:hover {
+    color:#fff;
+    background-color: #2062a1;
+    border-color:#2062a1
+   }
+
+
+.featurette-image {
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 15px;
+    background-color: #FFF;
+}
+
+
+
+/* UBO Layout for Header */
+
+.site-header {
+    padding: 25px 0px 15px 0px;
+  }
+
+#orgaunitTitle {
+    padding-left: 32px;
+}
+
+#orgaunitTitle a {
+    text-decoration: none;
+}
+
+#orgaunitTitle h1 {
+    color: #003b7a;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: Open Sans,sans-serif;
+  }
+
+#orgaunitTitle h2 {
+    color: #666;
+    font-size: 1.15rem;
+    margin-bottom: 0;
+    margin-top: 0.1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#udeLogo img {
+    width: 230px;
+    height: auto;
+    margin-top: 5px;
+}
+
+
+
+
+@media (min-width: 576px) {
+    .container, .container-fluid {
+      max-width: 540px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .container, .container-fluid {
+      max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container, .container-fluid {
+      max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container, .container-fluid {
+      max-width: 1250px;
+    }
+}
+@media (min-width: 576px) {
+    .container-sm, .container, .container-fluid {
+      max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container-md, .container-sm, .container, .container-fluid {
+      max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container, .container-fluid {
+      max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container, .container-fluid {
+      max-width: 1250px;
+    }
+}
+
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../site/fonts/OpenSans-VariableFont_wdth,wght.ttf')  format('truetype');
+    font-weight: 100 1000;
+    font-style: normal;  /* You can also specify ranges for italic styles if applicable */
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../site/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf')  format('truetype');
+    font-weight: 100 1000;
+    font-style: italic;  /* You can also specify ranges for italic styles if applicable */
+}
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../site/fonts/Inter-VariableFont_opsz,wght.ttf')  format('truetype');
+    font-weight: 100 1000;
+    font-style: normal;  /* You can also specify ranges for italic styles if applicable */
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../site/fonts/Inter-Italic-VariableFont_opsz,wght.ttf')  format('truetype');
+    font-weight: 100 1000;
+    font-style: italic;  /* You can also specify ranges for italic styles if applicable */
+}
+
+
+
+
+
+
+/* MOBILE FIXES */
+
+.navbar-toggler {
+    border-color: white; /* Change border if needed */
+    border: none;
+
+ }
+
+ .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+
+.collapse.navbar-collapse {
+    background-color: #003b7a;
+ }
+
+
+ /*.navbar-collapse .dropdown-item {
+    text-indent: 1rem;
+ }*/
+
+ .navbar-collapse .dropdown-item {
+    max-width: 90vw; /* maximum width relative to viewport width */
+    white-space: normal; /* allow wrapping! */
+    word-break: break-word; /* break long words if necessary */
+  }
