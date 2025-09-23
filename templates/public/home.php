@@ -1,14 +1,10 @@
 <html>
-<head>
-    <?php Template::loadChild('public/ude_head') ?>
-</head>
-
+<?php Template::loadChild('public/ude_head') ?>
 <body>
 <header>
     <?php Template::loadChild('public/ude_banner'); ?>
     <?php Template::loadChild('public/ude_navigation'); ?>
 </header>
-
 <div class="jumbotron">
     <div class="container">
         <div id="wrapper" style="display: flex;">
@@ -81,7 +77,6 @@
 </div>
 
 <div class="container apps">
-
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <?php foreach ($runs as $run) : ?>
