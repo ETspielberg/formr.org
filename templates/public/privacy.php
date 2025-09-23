@@ -1,7 +1,5 @@
 <?php
-Template::loadChild('public/header', array(
-    'headerClass' => 'fmr-small-header',
-));
+Template::loadChild('public/header_simple');
 ?>
 
 <section id="fmr-projects" style="padding-top: 2em;">

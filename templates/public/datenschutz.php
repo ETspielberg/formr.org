@@ -1,5 +1,5 @@
 <?php
-Template::loadChild('public/header');
+Template::loadChild('public/header_simple');
 ?>
 
 <div class="jumbotron">

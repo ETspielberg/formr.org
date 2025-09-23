@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-12 col-sm-6 order-sm-2 order-lg-3 order-2 mb-3 md-lg-0 col-lg-auto col-md-auto text-center">
                     <a href="https://www.uni-due.de/ub" class="navbar-brand">
-                        <img class="d-inline-block align-top" height="50" alt="UB-Logo" src="i/assets/common/mg/UB_Logo.PNG" style="width: 230px;height: auto;margin-top: 5px;">
+                        <img class="d-inline-block align-top" height="50" alt="UB-Logo" src="/assets/common/mg/UB_Logo.PNG" style="width: 230px;height: auto;margin-top: 5px;">
                     </a>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/datenschutz" class="nav-link" target="_blank">
+                        <a href="#datenschutz" class="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
                                 <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
