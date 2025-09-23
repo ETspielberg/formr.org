@@ -1,6 +1,13 @@
-<?php
-Template::loadChild('public/header_simple');
-?>
+<html>
+<head>
+    <?php Template::loadChild('public/ude_head') ?>
+</head>
+
+<body>
+<header>
+    <?php Template::loadChild('public/ude_banner'); ?>
+    <?php Template::loadChild('public/ude_navigation'); ?>
+</header>
 
 <div class="jumbotron">
     <div class="container">
@@ -22,7 +29,7 @@ Template::loadChild('public/header_simple');
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
 <div class="container">
-    <<!-- Abschnitt: Titel -->
+    <!-- Abschnitt: Titel -->
     <div class="row featurette">
         <h1 class="featurette-heading fw-normal lh-1">Datenschutzerklärung UB|Surveys</h1>
         <p class="lead">
@@ -267,8 +274,6 @@ Template::loadChild('public/header_simple');
     </div>
 </div>
 
-
-<?php Template::loadChild('public/disclaimer'); ?>
-
-<?php Template::loadChild('public/footer'); ?>
+<?php Template::loadChild('public/ude_footer'); ?>
+</body>
 			

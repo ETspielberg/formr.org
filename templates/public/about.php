@@ -2,152 +2,169 @@
 Template::loadChild('public/header');
 ?>
 
-<div class="jumbotron">
+<section id="fmr-projects" style="padding-top: 2em;">
     <div class="container">
-        <div id="wrapper" style="display: flex;">
-            <div style="padding-right:1em">
-                <img class="rounded-circle" src="img/bibliometrie_square.png" alt="Generic placeholder image" width="150" height="150" style="margin-bottom: 1em;background-color: white;">
-            </div>
-
-            <div style="align-items: flex-start;display: flex;flex-direction: column;justify-content: center;">
-                <h2 style="text-align: left;margin-bottom: -5px;"><i>UB | Surveys</i></h2>
-                <h1 class="display-3" style="font-weight: 400;text-align: left;">From <span style="font-weight: 600;">Publications</span> to <span style="font-weight: 600;">Umfragen</span></h1>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h2 class="fmr-lead animate-box">about formr</h2>
+                <p class="fmr-sub-lead animate-box">
+                    The open source software was created by <a href="https://rubenarslan.github.io/">Ruben C. Arslan</a> and is being maintained and developed jointly with <a href="https://www.psych.uni-goettingen.de/de/it/team/cyril-tata/cyril-s-tata">Cyril S. Tata</a>.
+                </p>
             </div>
         </div>
-    </div>
-</div>
-<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="container">
-                <img class="first-slide app-logo" src="img/Gender-Publication-Gap_Logo.svg" alt="First slide">
-
-                <div class="carousel-caption">
-                    <h1>Gender Publication Gap App</span></h1>
-                    <p>Eine Analyse der Unterschiede im Publikationsoutput von Männern und Frauen an der UDE</p>
-                    <p><a class="btn btn-lg btn-primary" href="https://insights.ub.uni-due.de/gender-gap-app/" target="_blank" role="button">&raquo; Zum Dashboard</a></p>
+        <div class="row">
+            <div class="col-md-4 col-xs-4 col-xs-offset-2">
+                <div class="pull-right text-center">
+                    <img src="<?= asset_url('build/img/cyril.jpg'); ?>" class="img-responsive img-circle team" alt="Cyril Tata">
+                    <hr />
+                    <h3>Cyril</h3>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <img class="second-slide app-logo" src="img/biblio_reports_icon.png" alt="Second slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>BiblioReports</h1>
-                    <p>Bibliometrische Reports. Jetzt. Nach Ihren Wünschen. Auf dem neuesten Stand.</p>
-                    <p><a class="btn btn-lg btn-primary" href="https://insights.ub.uni-due.de/biblio-reports/" target="_blank" role="button">&raquo; Zum Dashboard</a></p>
+            <div class="col-md-4 col-xs-4">
+                <div class="text-center">
+                    <img src="<?= asset_url('build/img/ruben.jpg'); ?>" class="img-responsive img-circle team" alt="Ruben Arslan">
+                    <hr />
+                    <h3>Ruben</h3>
                 </div>
             </div>
+
+            <div class="clear"></div>
+
         </div>
-        <div class="carousel-item">
-            <img class="third-slide app-logo" src="img/deal_icon.png" alt="Third slide">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Der freie unabhängige Calculator für Kosten - DEAL</h1>
-                    <p>Eine Analyse hinsichtlich der möglichen Kostenentwicklung durch DEAL-Verträge</p>
-                    <p><a class="btn btn-lg btn-primary" href="https://insights.ub.uni-due.de/deal-predictions/"  target="_blank">&raquo; Zum Dashboard</a></p>
-                </div>
+    </div>
+</section>
+<!-- END #fmr-projects -->
+
+<section id="fmr-features" style="padding-top: 2em;">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="fmr-lead animate-box"> Credit</h2>
+                <h3>&nbsp;</h3>
             </div>
         </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-<!-- App overview messaging and featurettes
-  ================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="text-left">
+                    <h3><i class="fa fa-fw fa-quote-left"></i> Citation</h3>
+                    <div class="alert alert-info">
+                        <p>
+                            If you are publishing research conducted using formr, <strong>please cite</strong> the paper and cite or at least mention the version of the software that was active when you ran your study (see Zenodo DOI below).
+                        </p>
+                        <blockquote>
+							Arslan, R. C., Walther, M. P., &amp; Tata, C. S. (2020). formr: A study framework allowing for automated feedback generation and complex longitudinal experience-sampling studies using R. <i>Behavior Research Methods</i>, 52, 376–387. <a href="https://doi.org/10.3758/s13428-019-01236-y" target="_blank">https://doi.org/10.3758/s13428-019-01236-y</a>
+						</blockquote>
 
-<div class="container apps">
+                        <blockquote>
+                        Arslan, R.C., &amp; Tata, C.S. (<?php echo date("Y"); ?>). formr: A study framework allowing for automated feedback generation and complex longitudinal experience sampling studies using R. (version <?php echo Config::get('version'); ?>). <a href="https://zenodo.org/badge/latestdoi/11849439"><img src="https://zenodo.org/badge/11849439.svg" alt="DOI"></a>
+                        </blockquote>
+                    </div>
+                    <p>
+                        Cite the version that was active while you ran your study. Zenodo will keep backups of each major release, so that the software used for your study is preserved when we update it and if Github ceases to exist. This ensures reproducibility and allows us to trace papers affected by major bugs, should we discover any in the future.
+                    </p>
+                    <div class="alert alert-info">
+                        <p>
+                            If you used the accompanying R package, you should cite it too, because it is independent of the rest of the software and independently versioned.
+                        </p>
+                        <blockquote>
+                            Arslan, R.C. (<?php echo date("Y"); ?>). formr R package (Version 0.10.0). <a href="https://zenodo.org/badge/latestdoi/19236374"><img src="https://zenodo.org/badge/19236374.svg" alt="DOI"></a>
+                        </blockquote>
+                    </div>
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-        <div class="col-lg-4">
-            <img class="rounded-circle" src="img/gender-publication-gap_square.png" alt="Generic placeholder image" width="140" height="140"  style="background-color: white;">
-            <br><span style="background-color: #004c93; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">UDE-intern</span>
-            <h2 class="fw-normal">UDE Gender Publication Gap App</h2>
-            <p>Eine Analyse der Unterschiede im Publikationsoutput von Männern und Frauen anhand der in der Universitätsbibliographie verzeichneten Publikationen, präsentiert von der Universitätsbibliothek Duisburg-Essen</p>
-            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/gender-gap-app/" target="_blank" role="button">zur App &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="rounded-circle" src="img/deal_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
-            <br><span style="background-color: #61a27c; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">offen für alle</span>
-            <h2 class="fw-normal">DEAL<br>Vorhersage-Tool</h2>
-            <p>Eine Analyse hinsichtlich der möglichen Publikationszahlen und Kostenentwicklung durch DEAL-Verträge anhand des bisherigen Publikationsverhaltens. </p>
-            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/deal-predictions/" target="_blank" role="button">zur App &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="rounded-circle" src="img/biblio_reports_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
-            <br><span style="background-color: #ec7206; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">interner Beta-Test</span>
-            <h2 class="fw-normal">BiblioReports App</h2>
-            <p>Eine interaktive App zur Erstellung von individuellen und DORA-kompatiblen bibliometrischen Analysen basierend auf freien Daten ganz nach Ihren Wünschen.</p>
-            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/biblio-reports/" target="_blank" role="button">zur App &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="rounded-circle" src="img/verlagsabfrage_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
-            <br><span style="background-color: #b8103b; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">UB-intern</span>
-            <h2 class="fw-normal">Verlagsabfrage-Tool</h2>
-            <p>Abfrage und Überblick über UDE-Publikationen in bestimmten Zeitschriftenlisten, z.B. von spezifischen Verlagen. </p>
-            <p><a class="btn btn-secondary" href="https://insights.ub.uni-due.de/verlagsabfrage-tool/" target="_blank" role="button">zur App &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-            <img class="rounded-circle" src="img/anfragen_square.png" alt="Generic placeholder image" width="140" height="140" style="background-color: white;">
-            <br><span style="background-color: #004c93; color: white; padding: 2px 8px; border-radius: 15px; font-size: 12px;">UDE-intern</span>
-            <h2 class="fw-normal">Analysen auf Anfrage</h2>
-            <p>Bei Bedarf erstellen wir gerne weitere anlassbezogene individuelle Analysen auf Anfrage (beispielsweise für Förderanträge oder Bewerbungsverfahren).</p>
-            <p><a class="btn btn-secondary" href="mailto:bibliometrie.ub@uni-due.de" target="_blank" role="button">Sprechen Sie uns an!</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+                    <h3><i class="fa fa-fw fa-money"></i> Funding</h3>
+                    <p>Friedrich-Schiller-University Jena – <a href="http://dfg.de/">DFG</a> <a href="http://www.kompass.uni-jena.de">project "Kompass"</a>, PIs: <a href="https://fernuni-hagen.de/bildungspsychologie/team/julia.zimmermann.shtml">Julia Zimmermann</a>, <a href="https://www.psychologie.uni-jena.de/en/Departments/Personality+Psychology+_+Psychological+Diagnostics/staff/Franz+Neyer.html">Franz J. Neyer</a>
+                    </p>
+                    <p>Georg August University Göttingen – <a href="https://psych.uni-goettingen.de/en/biopers/team/penke">Lars Penke</a>, current hosting</p>
+                    <p><a href="https://cos.io">Center for Open Science</a> – <a href="https://cos.io/pr/2015-09-24/">Open Contributor Grant</a> to Ruben Arslan and Cyril Tata.
 
 
-    <!-- START THE FEATURETTES -->
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="text-left">
+                    <h3><i class="fa fa-fw fa-users"></i> Team</h3>
+                    <p>
+                        formr was made by <a href="https://www.psych.uni-goettingen.de/en/biopers/team/arslan">Ruben C. Arslan</a> and <a href="https://www.psych.uni-goettingen.de/de/it/team/cyril-tata/cyril-s-tata">Cyril S. Tata</a>.
+                    </p><p>The current incarnation of the survey framework draws on prior work by Linus Neumann, prior funding by Jaap J. A. Denissen, ideas, testing, and feedback by Sarah J. Lennartz, Isabelle Habedank, and <a href="https://www.psych.uni-goettingen.de/en/biopers/team/gerlach">Tanja M. Gerlach</a>.</p>
+                    <p></p>
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">BiblioReports <span class="text-body-secondary">im Beta-Test</span></h2>
-            <p class="lead">Die neueste Entwicklung des UDE-Bibliometrie-Team, die BiblioReports App zur Erstellung von individuellen DORA-kompatiblen biliometrischen Reports befindet sich nun in der Beta-Testphase. Ziel des Tests ist es, auf inhaltlicher Ebene Feedback aus möglichst vielen verschiedenen Perspektiven zu erhalten und auf technischer Ebene fehleranfällige Sonderfälle zu identifizieren und zu beheben.</p>
-        </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="img/BiblioReports_collabs.gif" alt="Generic placeholder image">
-        </div>
-    </div>
+                    <div class="row">
 
-    <hr class="featurette-divider">
+                        <div class="col-md-6">
+                            <p class="lead">
+                                <img src="<?= asset_url('/build/img/goettingen_uni.png') ?>" alt="Uni Göttingen logo"><br>
+                                <small><small>Georg August University Göttingen</small></small>
+                            </p>
+                        </div>
 
-    <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Vorhersage von Publikationszahlen und -kosten</h2>
-            <p class="lead">Bei der Bewertung von Transformationsverträgen wie den DEAL-Verträgen mit Elsevier, Wiley und Springer Nature ist die Frage, wie hoch die Publikationszahlen und die damit verbundenen Kosten in den nächsten Jahren sein werden von großer Bedeutung für die Finanzplanung. Das Bibliometrie-Team bietet ein Tool an, das neben einer Schätzung für diese Zahlen auch die Unsicherheit bei der Schätzung veranschaulicht und dadurch auf die mit den Verträgen einhergehende Planungsunsicherheit hinweist.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="img/news_predictions.PNG" alt="Generic placeholder image">
+                        <div class="col-md-6">
+                            <p class="lead">
+                                <img src="<?= asset_url('/build/img/jena_uni.png') ?>" alt="Uni Jena logo"><br>
+                                <small><small>Friedrich Schiller University Jena</small></small>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    </p><h3><i class="fa fa-fw fa-github"></i> Other credit</h3>
+                    <p>
+                        formr is open source software and uses a lot of other free software, see the <a href="https://github.com/rubenarslan/formr.org">Github repository</a> for some due credit. Most importantly, formr uses <a href="http://opencpu.org">OpenCPU</a> as its R backend.
+                    </p>
+                </div>
+            </div>
+            <div class="clearfix visible-sm-block"></div>
         </div>
     </div>
+</section>
 
-    <hr class="featurette-divider">
+<!-- END #fmr-features -->
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Bibliometrie für die  <span class="text-body-secondary">Exzellenzinitiative</span></h2>
-            <p class="lead">Das Bibliometrie-Team hat die Forschungsgruppen, die sich als Exzellenzcluster in der Exzellenzinitiative bewerben wollen, bei Ihren Vorbereitungen und Anträgen durch Analysen der Clusterzusammensetzung, Publikationsaktivität und Vernetzung unterstützt. Wir wünschen den Gruppen viel Erfolg bei der Bewerbung!</p>
+
+<section id="fmr-features-2">
+
+    <h2 class="fmr-lead text-center">Hosting &amp; Security</h2>
+    <div class="container">
+        <div class="col-md-6 col-md-push-6">
+            <h3 id="security"><i class="fa fa-fw fa-lock"></i> Security</h3>
+            <p>
+                Your (and your participants') connection to this site is encrypted using state-of-the-art security using <a href="https://en.wikipedia.org/wiki/HTTPS">HTTPS (also called HTTP over TLS)</a>. This protects against eavesdropping on survey responses and tampering with the content of our site.
+            </p>
+            <p>
+                We have taken several measures to make it very unlikely that sensitive participant's data is divulged. It is not possible for participants to retrieve their answers to past responses, unless those are incorporated in a feedback somewhere by you, the researcher. Therefore, care should be taken not to incorporate sensitive information into the feedback and to alert participants to any possible privacy gray areas in the feedback (e.g. incorporating participant responses about their employer in a feedback mailed to a work email address or incorporating feedback on romantic activity in a study where it's likely that the participant's partner has access to their device).
+            </p>
+            <p>
+                Participants get an access token for the study, which functions as a strong password. However, an access token is stored on participant's devices/browsers by default and (if you set this up) emails can be sent to their email addresses, so the protection is only as strong as security for access to their device or their email account.
+            </p>
+            <p>
+                It is very important that you, as the study administator, choose a strong password for the admin account and the email address that it is linked to. Here's <a href="https://xkcd.com/936/">some good advice</a> on choosing a strong password. Do not share the password with your collaborators via unencrypted channels (e.g. email) and don't share the password via any medium together with the information for which account and website it is. Keep your password in a safe place (your mind, a good password manager) and make sure your collaborators do the same.
+            </p>
+            <p>
+                The same precautions, of course, should be respected for the data that you collected.<br>
+                Should you plan to release the collected data openly, please make sure that the data are not sensitive and not (re-)identifiable.
+            </p>
+
         </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="img/exc.PNG" alt="Generic placeholder image" style="filter: blur(0.1px);-webkit-filter: blur(0.1px);">
+        <div class="col-md-6 col-md-pull-6">
+            <div class="">
+                <div class="fmr-text animate-box">
+                    <h3><i class="fa fa-server fa-fw"></i> Hosting</h3>
+                    <p>
+                        This instance of the formr.org is hosted on servers at the Georg August University Göttingen. It implements a security model that individually and uniquely protects the various entities of the platform, the application, it's data and the R interface (OpenCPU). These entities communicate only within a local network whose access is restricted to the IT administators of the Georg-Elias-Müller-Institute of Psychology.
+                    </p>
+                    <p>
+                        Our entire database is backed up nightly. Whenever real data is deleted by you in bulk, formr backs it up as well, right before deletion. No backup is made if you delete single users/single survey entries. We do not specifically back up run units and survey files, but you can redownload the most recently uploaded version of a survey file and download files with the run structure to your computer or to the <a href="https://osf.io">openscienceframework</a>.
+                    </p>
+
+
+
+                </div>
+            </div>
+
         </div>
     </div>
-
+</section>
+<!-- END #fmr-features-2 -->
 
 <?php Template::loadChild('public/disclaimer'); ?>
 

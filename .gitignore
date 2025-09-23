@@ -13,7 +13,7 @@ formr-package/man
 /tmp/*.lock
 /tmp/*.*
 /nbproject
-/webroot/assets/tmp/*
+/webroot/assets/common/js/tmp/*
 /webroot/assets/dsc.php
 /webroot/assets/node_modules/*
 /webroot/assets/tmp/admin/*.*
