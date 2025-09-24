@@ -58,10 +58,13 @@
             <img class="third-slide app-logo" src="img/deal_icon.png" alt="Third slide">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1><strong>formr</strong> survey framework</h1>
-                    <p>chain simple surveys into long runs, use the power of R to generate pretty feedback and complex designs</p>
+                    <h1>Das <strong>formr</strong> Survey Framework</h1>
+                    <p>Chain simple surveys into long runs, use the power of R to generate pretty feedback and complex designs</p>
                     <p><a class="btn btn-lg btn-primary" href="https://formr.org/"
-                          target="_blank">&raquo; Zum freien Plattform</a></p>
+                          target="_blank">&raquo;
+                            Zum Projekt
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -94,7 +97,7 @@
         <?php endforeach; ?>
         <?php else : ?>
             <div class="col-12">
-                <p>Derzeit sind keine Runs verfügbar.</p>
+                <p>Derzeit sind keine Umfragen frei verfügbar.</p>
             </div>
         <?php endif; ?>
     </div>
