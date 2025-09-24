@@ -79,6 +79,7 @@
 <div class="container apps">
     <!-- Three columns of text below the carousel -->
     <div class="row">
+        <?php if (!empty($runs) && is_array($runs)) : ?>
         <?php foreach ($runs as $run) : ?>
             <div class="col-lg-4">
                 <h2 class="fw-normal"><a
@@ -91,6 +92,11 @@
                                 class="fa fa-users"></i></a></p>
             </div><
         <?php endforeach; ?>
+        <?php else : ?>
+            <div class="col-12">
+                <p>Derzeit sind keine Runs verfügbar.</p>
+            </div>
+        <?php endif; ?>
     </div>
 
     <?php Template::loadChild('public/ude_footer'); ?>
