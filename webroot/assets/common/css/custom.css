@@ -250,14 +250,14 @@ a {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../../site/fonts/OpenSans-VariableFont_wdth,wght.ttf')  format('truetype');
+    src: url('/assets/common/fonts/OpenSans-VariableFont_wdth,wght.ttf')  format('truetype');
     font-weight: 100 1000;
     font-style: normal;  /* You can also specify ranges for italic styles if applicable */
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../../site/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf')  format('truetype');
+    src: url('/assets/common/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf')  format('truetype');
     font-weight: 100 1000;
     font-style: italic;  /* You can also specify ranges for italic styles if applicable */
 }
@@ -265,14 +265,14 @@ a {
 
 @font-face {
     font-family: 'Inter';
-    src: url('../../site/fonts/Inter-VariableFont_opsz,wght.ttf')  format('truetype');
+    src: url('/assets/common/fonts/Inter-VariableFont_opsz,wght.ttf')  format('truetype');
     font-weight: 100 1000;
     font-style: normal;  /* You can also specify ranges for italic styles if applicable */
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('../../site/fonts/Inter-Italic-VariableFont_opsz,wght.ttf')  format('truetype');
+    src: url('/assets/common/fonts/Inter-Italic-VariableFont_opsz,wght.ttf')  format('truetype');
     font-weight: 100 1000;
     font-style: italic;  /* You can also specify ranges for italic styles if applicable */
 }
