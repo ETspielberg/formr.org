@@ -9,13 +9,13 @@
     <div class="container">
         <div id="wrapper" style="display: flex;">
             <div style="padding-right:1em">
-                <img class="rounded-circle" src="img/bibliometrie_square.png" alt="Generic placeholder image"
+                <img class="rounded-circle" src="assets/common/img/surveys_logo_mockup.png" alt="Generic placeholder image"
                      width="150" height="150" style="margin-bottom: 1em;background-color: white;">
             </div>
 
             <div style="align-items: flex-start;display: flex;flex-direction: column;justify-content: center;">
                 <h2 style="text-align: left;margin-bottom: -5px;"><i>UB | Surveys</i></h2>
-                <h1 class="display-3" style="font-weight: 400;text-align: left;">From Feedback to insights</h1>
+                <h1 class="display-3" style="font-weight: 400;text-align: left;">From Feedback to Insights</h1>
             </div>
         </div>
     </div>
@@ -31,19 +31,19 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="container">
-                <img class="first-slide app-logo" src="img/Gender-Publication-Gap_Logo.svg" alt="First slide">
+                <img class="first-slide app-logo" src="assets/common/img/wissenschaftsmythen_header.png" alt="First slide">
 
                 <div class="carousel-caption">
                     <h1>Wissenschaftsmythen – Wahr oder falsch?</span></h1>
                     <p><strong>FAKT oder FAKE? – (er)kennst du den Unterschied?</strong></p>
-                    <p>Ist Spinat wirklich ein Eisenwunder? War Napoleon klein? Teste dein Alltagswissen und erfahre, was hinter </p>
+                    <p>Ist Spinat wirklich ein Eisenwunder? War Napoleon klein? Teste dein Alltagswissen und erfahre, was hinter bekannten Mythen steckt.</p>
                     <p><a class="btn btn-lg btn-primary" href="/wissenschaftsmythen"
                           target="_blank" role="button">&raquo; Zum Quiz</a></p>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="second-slide app-logo" src="img/biblio_reports_icon.png" alt="Second slide">
+            <img class="second-slide app-logo" src="assets/common/img/fake-news_header.png" alt="Second slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Fake News erkennen – Spiel für Profis!</h1>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="third-slide app-logo" src="img/deal_icon.png" alt="Third slide">
+            <img class="third-slide app-logo" src="assets/common/img/formr_logo_transparent.png" alt="Third slide" style="background-color: #333333">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Das <strong>formr</strong> Survey Framework</h1>
