@@ -32,16 +32,30 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.apps .col-lg-4 {
+.apps .studies-card {
   margin-bottom: 1.5rem;
   text-align: center;
+  background-color: #FFF;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px #DDD;
+  padding: 2rem;
 }
 /* rtl:begin:ignore */
-.apps .col-lg-4 p {
+.apps .studies-card p {
   margin-right: .75rem;
   margin-left: .75rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
+
+.apps a {
+  text-decoration: none;
+}
+
+.apps .row {
+  justify-content: space-evenly;
+  }
 
 /* Center align the text within the three columns below the carousel */
 .logins .col-lg-6, .logins .col-lg-5, .logins .col-lg-4 {
