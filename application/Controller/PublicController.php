@@ -14,7 +14,7 @@ class PublicController extends Controller {
         if (Site::getSettings('content:studies:show', 'true') !== 'true') {
             formr_error(403, 'Not Public', 'Page cannot be displayed');
         }
-        $this->setView('public/studies', array('runs' => RunHelper::getPublicRuns()));
+        $this->setView('public/home', array('runs' => RunHelper::getPublicRuns()));
         return $this->sendResponse();
     }
     public function privacyAction() {
