@@ -96,7 +96,7 @@
                         <p><a href="<?php echo run_url($run['name']); ?>" class="btn btn-secondary">Participate <i
                                         class="fa fa-users"></i></a></p>
                     </div>
-                </div><
+                </div>
             <?php endforeach; ?>
             <?php else : ?>
                 <div class="col-12">
