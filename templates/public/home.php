@@ -86,14 +86,16 @@
             <?php if (!empty($runs) && is_array($runs)) : ?>
             <?php foreach ($runs as $run) : ?>
                 <div class="col-lg-4">
-                    <h2 class="fw-normal"><a
-                                href="<?php echo run_url($run['name']); ?>"><?php echo($run['title'] ? $run['title'] : $run['name']); ?></a>
-                    </h2>
-                    <div class="blurb col-md-12">
-                        <?php echo !empty($run['public_blurb_parsed']) ? $run['public_blurb_parsed'] : '<p class="empty-study-blurb">&nbsp;</p>' ?>
+                    <div class="studies-card">
+                        <h2 class="fw-normal"><a
+                                    href="<?php echo run_url($run['name']); ?>"><?php echo($run['title'] ? $run['title'] : $run['name']); ?></a>
+                        </h2>
+                        <div class="blurb col-md-12">
+                            <?php echo !empty($run['public_blurb_parsed']) ? $run['public_blurb_parsed'] : '<p class="empty-study-blurb">&nbsp;</p>' ?>
+                        </div>
+                        <p><a href="<?php echo run_url($run['name']); ?>" class="btn btn-secondary">Participate <i
+                                        class="fa fa-users"></i></a></p>
                     </div>
-                    <p><a href="<?php echo run_url($run['name']); ?>" class="btn btn-secondary">Participate <i
-                                    class="fa fa-users"></i></a></p>
                 </div><
             <?php endforeach; ?>
             <?php else : ?>
