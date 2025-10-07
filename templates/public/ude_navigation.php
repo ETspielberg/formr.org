@@ -13,9 +13,9 @@
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Unsere
                         Umfragen</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="https://surveys.ub.uni-due.de/biblio-reports/" target="_blank">Publikationserfahrung</a>
-                        <a class="dropdown-item" href="https://surveys.ub.uni-due.de/gender-gap-app/" target="_blank">Wissenschafts-Quiz</a>
-                        <a class="dropdown-item" href="https://surveys.ub.uni-due.de/deal-predictions/" target="_blank">Publication-Days-Evaluation</a>
+                        <a class="dropdown-item" href="https://surveys.ub.uni-due.de/verlagsumfrage" target="_blank">Publikationserfahrung</a>
+                        <a class="dropdown-item" href="https://surveys.ub.uni-due.de/wissenschaftsmythen" target="_blank">Wissenschafts-Quiz</a>
+                        <a class="dropdown-item" href="https://surveys.ub.uni-due.de/fake-news" target="_blank">Fake News erkennen/a>
                     </div>
                 </li>
                 <li class="nav-item">
