@@ -165,7 +165,7 @@ $nrColumns = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($r
 $nrRows = $resultsSheet->getHighestDataRow();
 echo "\nColumns: {$nrColumns}, Rows: {$nrRows} \n";
 for ($i = 1; $i <= $nrColumns; $i++) {
-    $columns[] = trim($resultsSheet->getCellByColumnAndRow($i, 1)->getValue());
+    $columns[] = trim($resultsSheet->getCell([$i, 1])->getValue());
 }
 
 // Validate columns of backup sheet to ensure all are in survey items sheet
